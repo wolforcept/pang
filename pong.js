@@ -5,7 +5,9 @@ let colorTrue, colorFalse;
 // let dxTrue = 5, dyTrue = 4, dxFalse = -5, dyFalse = -4;
 
 let xTrue = S / 2, yTrue = S / 2, xFalse = SB * S - S / 2, yFalse = SB * S - S / 2;
-let dxTrue = 6+Math.random(), dyTrue = 6+Math.random(), dxFalse = -7+Math.random(), dyFalse = -7+Math.random();
+let trueRandom = Math.random();
+let falseRandom = Math.random();
+let dxTrue = 6 + trueRandom, dyTrue = 7 - trueRandom, dxFalse = -7 + falseRandom, dyFalse = -6 - falseRandom;
 
 let board = [];
 
