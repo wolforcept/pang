@@ -41,13 +41,13 @@ function draw() {
 
     fill(colorTrue)
     rect(xTrue - S / 2, yTrue - S / 2, S, S);
-    fill(255, 255, 255)
-    rect(xTrue, yTrue, 1, 1);
+    //fill(255, 255, 255)
+    //rect(xTrue, yTrue, 1, 1);
 
     fill(colorFalse)
     rect(xFalse - S / 2, yFalse - S / 2, S, S);
-    fill(0, 0, 0)
-    rect(xFalse, yFalse, 1, 1);
+    //fill(0, 0, 0)
+    //rect(xFalse, yFalse, 1, 1);
 
     // TRUE MOVEMENT
     {
