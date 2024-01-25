@@ -5,14 +5,14 @@ let colorTrue, colorFalse;
 // let dxTrue = 5, dyTrue = 4, dxFalse = -5, dyFalse = -4;
 
 let xTrue = S / 2, yTrue = S / 2, xFalse = SB * S - S / 2, yFalse = SB * S - S / 2;
-let dxTrue = 5, dyTrue = 4, dxFalse = -4, dyFalse = -5;
+let dxTrue = 6+Math.random(), dyTrue = 6+Math.random(), dxFalse = -7+Math.random(), dyFalse = -7+Math.random();
 
 let board = [];
 
 function setup() {
     createCanvas(S * SB, S * SB);
-    colorTrue = color(90, 20, 0);
-    colorFalse = color(0, 20, 90);
+    colorTrue = color(247, 164, 69);
+    colorFalse = color(84, 42, 156);
 
     noStroke();
     fill(colorTrue)
