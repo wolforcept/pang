@@ -32,6 +32,19 @@ function setup() {
 
 }
 
+function mouseClicked() {
+    console.log("asd")
+    const r1 = Math.random() * 255;
+    const g1 = Math.random() * 255;
+    const b1 = Math.random() * 255;
+    const r2 = 255 - r1;
+    const g2 = 255 - g1;
+    const b2 = 255 - b1;
+
+    colorTrue = color(r1, g1, b1);
+    colorFalse = color(r2, g2, b2);
+}
+
 function draw() {
 
     for (let x = 0; x < board.length; x++) {
