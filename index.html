@@ -30,26 +30,48 @@
             justify-content: center;
         }
 
-        .wrapper {
+        #nr1wrapper {
             padding: 2px 5px;
-            border-radius: 4px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        #nr2wrapper {
+            padding: 2px 5px;
+            border-radius: 4px 0 0 4px;
         }
 
         * {
             user-select: none;
+        }
+
+        #nr1,
+        #nr2 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #divider {
+            background-color: black;
+            height: 100%;
+            width: 1px;
+            position: absolute;
+            left: 50%;
         }
     </style>
 </head>
 
 <body>
     <script src="pong.js" async defer></script>
-    <div style="display: flex; flex-direction: row; gap: 10px; margin-top: 7px;">
+    <div style="position: relative; display: flex; flex-direction: row; margin-top: 7px;">
         <div class="wrapper" id="nr2wrapper">
             <div id="nr2"></div>
         </div>
         <div class="wrapper" id="nr1wrapper">
             <div id="nr1"></div>
         </div>
+        <div id="divider"></div>
     </div>
 </body>
 

@@ -78,12 +78,17 @@ function draw() {
         }
     }
 
+    var colorsTruePercent = Math.round(colorsTrue * 100 / 256) + "%";
+    var colorsFalsePercent = Math.round(colorsFalse * 100 / 256) + "%";
+
     {
         const elem1 = document.getElementById("nr2");
-        elem1.innerHTML = "" + colorsTrue;
+        elem1.innerHTML = "" + colorsTruePercent;
+        elem1.style.width = colorsTrue + "px";
 
         const elem2 = document.getElementById("nr1");
-        elem2.innerHTML = "" + colorsFalse;
+        elem2.innerHTML = "" + colorsFalsePercent;
+        elem2.style.width = colorsFalse + "px";
     }
 
     fill(colorTrue)
