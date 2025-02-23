@@ -82,13 +82,13 @@ function draw() {
     var colorsFalsePercent = Math.round(colorsFalse * 100 / 256) + "%";
 
     {
-        const elem1 = document.getElementById("nr2");
-        elem1.innerHTML = "" + colorsTruePercent;
-        elem1.style.width = colorsTrue + "px";
+        const elem1 = document.getElementById("nr1");
+        elem1.innerHTML = "" + colorsFalsePercent;
+        elem1.style.width = colorsFalse + "px";
 
-        const elem2 = document.getElementById("nr1");
-        elem2.innerHTML = "" + colorsFalsePercent;
-        elem2.style.width = colorsFalse + "px";
+        const elem2 = document.getElementById("nr2");
+        elem2.innerHTML = "" + colorsTruePercent;
+        elem2.style.width = colorsTrue + "px";
     }
 
     fill(colorTrue)

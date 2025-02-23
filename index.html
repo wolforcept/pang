@@ -23,7 +23,7 @@
         }
 
         body {
-            background-color: rgb(31, 31, 32);
+            background-color: #1f1f20;
             display: flex;
             flex-direction: column-reverse;
             align-items: center;
@@ -32,16 +32,12 @@
 
         #nr1wrapper {
             padding: 2px 5px;
-            border-radius: 0 4px 4px 0;
+            border-radius: 4px 0 0 4px;
         }
 
         #nr2wrapper {
             padding: 2px 5px;
-            border-radius: 4px 0 0 4px;
-        }
-
-        * {
-            user-select: none;
+            border-radius: 0 4px 4px 0;
         }
 
         #nr1,
@@ -53,11 +49,15 @@
         }
 
         #divider {
-            background-color: black;
+            background-color: #1f1f20;
             height: 100%;
             width: 1px;
             position: absolute;
             left: 50%;
+        }
+
+        * {
+            user-select: none;
         }
     </style>
 </head>
@@ -65,11 +65,11 @@
 <body>
     <script src="pong.js" async defer></script>
     <div style="position: relative; display: flex; flex-direction: row; margin-top: 7px;">
-        <div class="wrapper" id="nr2wrapper">
-            <div id="nr2"></div>
-        </div>
         <div class="wrapper" id="nr1wrapper">
             <div id="nr1"></div>
+        </div>
+        <div class="wrapper" id="nr2wrapper">
+            <div id="nr2"></div>
         </div>
         <div id="divider"></div>
     </div>
