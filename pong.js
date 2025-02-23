@@ -30,10 +30,10 @@ function setup() {
         }
     }
 
+    mouseClicked(false);
 }
 
-function mouseClicked() {
-    console.log("asd")
+function mouseClicked(shouldChangeColors = true) {
     const r1 = Math.random() * 255;
     const g1 = Math.random() * 255;
     const b1 = Math.random() * 255;
@@ -43,15 +43,47 @@ function mouseClicked() {
 
     colorTrue = color(r1, g1, b1);
     colorFalse = color(r2, g2, b2);
+
+    {
+        const elem1 = document.getElementById("nr2wrapper");
+        elem1.style.backgroundColor = rgbToHex(r1, g1, b1);
+        elem1.style.color = rgbToHex(r2, g2, b2);
+
+        const elem2 = document.getElementById("nr1wrapper");
+        elem2.style.color = rgbToHex(r1, g1, b1);
+        elem2.style.backgroundColor = rgbToHex(r2, g2, b2);
+    }
+}
+
+function rgbToHex(r, g, b) {
+    return "#" + componentToHex(Number.parseInt(r)) + componentToHex(Number.parseInt(g)) + componentToHex(Number.parseInt(b));
+}
+
+function componentToHex(c) {
+    var hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
 }
 
 function draw() {
 
+    var colorsTrue = 0;
+    var colorsFalse = 0;
     for (let x = 0; x < board.length; x++) {
         for (let y = 0; y < board[x].length; y++) {
-            fill(board[x][y] ? colorTrue : colorFalse)
+            fill(board[x][y] ? colorTrue : colorFalse);
             rect(x * S, y * S, S, S);
+
+            if (board[x][y]) colorsTrue++;
+            else colorsFalse++;
         }
+    }
+
+    {
+        const elem1 = document.getElementById("nr2");
+        elem1.innerHTML = "" + colorsTrue;
+
+        const elem2 = document.getElementById("nr1");
+        elem2.innerHTML = "" + colorsFalse;
     }
 
     fill(colorTrue)
